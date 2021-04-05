@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import {useRef} from 'react';
+// import PageInputReducer from './Components/reducer';
+// import PageInputState from './Components/state';
+// import PageInputMemo from './Components/memo';
+// import PageInputEffect from './Components/effect';
+// import InputText from './Components/ref';
+// import InputTextoImperative from './Components/imperativeHandle';
+// import PageInputLayoutEffect from './Components/layoutEffect';
+// import PageInputDebugValue from './Components/debugValue';
+import PageInputContext, {PageContextProvider} from './Components/context';
 
 function App() {
+
+  // const inputRef = useRef(null);
+  // const focaInput = () => {
+  //   inputRef.current.focus();
+  // };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <PageInputMemo /> */}
+      {/* <PageInputEffect /> */}
+      {/* <InputText /> */}
+      {/* <PageInputReducer/>*/}
+      {/*<PageInputState/> */}
+      {/* <InputTextoImperative ref={inputRef}/>
+      <button onClick={focaInput}>Dá foco no input</button> */}
+      {/* <PageInputLayoutEffect/> */}
+      {/* <PageInputDebugValue/> */}
+      <PageContextProvider><PageInputContext/></PageContextProvider>
     </div>
   );
 }
