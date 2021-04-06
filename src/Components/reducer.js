@@ -1,21 +1,19 @@
 import React, { useReducer } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const initialState = { count: 0 };
-
 function reducer(state, action) {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1 };
+      return state + 1;
     case "decrement":
-      return { count: state.count - 1 };
+      return state - 1;
     default:
-      return { count: action.newState };
+      return action.newState;
   }
 }
 
 export default function PageInputReducer() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, 0);
 
   return (
     <div>
@@ -25,7 +23,7 @@ export default function PageInputReducer() {
       <input
         type="number"
         step="1"
-        value={state.count}
+        value={state}
         onChange={(evento) => {
           dispatch({
               newState: Number(evento.target.value)

@@ -1,27 +1,31 @@
 import React, { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const initialState = { count: 0 };
-
 export default function PageInputState() {
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState(0);
+
+  function increment(){
+    setState(state + 1)
+  }
+  function decrement(){
+    setState(state - 1)
+  }
+  function handleChange(event){
+    setState(Number(event.target.value))
+  }
 
   return (
     <div>
-      <button onClick={() => setState({count: state.count - 1})}>
+      <button onClick={decrement}>
         <FiMinus />
       </button>
       <input
         type="number"
         step="1"
-        value={state.count}
-        onChange={(evento) => {
-          setState({
-              count: Number(evento.target.value)
-          });
-        }}
+        value={state}
+        onChange={handleChange}
       />
-      <button onClick={() => setState({count: state.count + 1 })}>
+      <button onClick={increment}>
         <FiPlus />
       </button>
     </div>

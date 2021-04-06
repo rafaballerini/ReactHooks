@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const initialState = { count: 0 };
-
 export default function PageInputLayoutEffect() {
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState(0);
 
   useEffect(() => {
     console.log('effect')
@@ -17,13 +15,13 @@ export default function PageInputLayoutEffect() {
   }, [])
 
   function increment(){
-    setState({count: state.count + 1 })
+    setState(state + 1)
   }
   function decrement(){
-    setState({count: state.count - 1 })
+    setState(state - 1)
   }
   function handleChange(event){
-    setState({count: Number(event.target.value)})
+    setState(Number(event.target.value))
   }
 
   return (
@@ -34,7 +32,7 @@ export default function PageInputLayoutEffect() {
       <input
         type="number"
         step="1"
-        value={state.count}
+        value={state}
         onChange={handleChange}
       />
       <button onClick={increment}>

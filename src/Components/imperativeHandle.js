@@ -7,6 +7,9 @@ function InputTextoImperative(props, ref) {
     useImperativeHandle(ref, () => ({
         focus: () => {
           inputRef.current.focus();
+        }, 
+        console: () => {
+          console.log('teste')
         }
       }));
 

@@ -43,3 +43,8 @@ export default function PageInputContext() {
     </div>
   );
 }
+
+
+const list = [1, 2, 3, 4]
+list.map((a, b, c) => {} )
+

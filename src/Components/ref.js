@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 
 export default function InputTexto() {
-    const inputEl = useRef(null);
+    const inputRef = useRef(null);
     const focaInput = () => {
-      inputEl.current.focus();
+      inputRef.current.focus();
     };
     return (
       <>
-        <input ref={inputEl} type="text" />
+        <input ref={inputRef} type="text" />
         <button onClick={focaInput}>Dá foco no input</button>
       </>
     );

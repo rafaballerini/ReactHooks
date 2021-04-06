@@ -1,19 +1,17 @@
 import React, { useCallback, useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const initialState = { count: 0 };
-
 export default function PageInputCallback() {
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState(0);
 
   const increment = useCallback(()=>{
-    setState({count: state.count + 1 })
+    setState(state + 1)
   },[state])
   const decrement = useCallback(()=>{
-    setState({count: state.count - 1 })
+    setState(state - 1)
   },[state])
   const handleChange = useCallback((event)=>{
-    setState({count: Number(event.target.value)})
+    setState(Number(event.target.value))
   },[state])
 
   return (
@@ -24,7 +22,7 @@ export default function PageInputCallback() {
       <input
         type="number"
         step="1"
-        value={state.count}
+        value={state}
         onChange={handleChange}
       />
       <button onClick={increment}>
