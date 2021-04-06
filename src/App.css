@@ -1,7 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
 .App {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: #302326;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body input {
   text-align: center;
 }
 
+h1 {
+  left: calc(50% - 40px);
+  color: #f6a6b6;
+}
+
+.content {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content button {
+  outline: none;
+  /* border-top: 5px solid #ffacc4;
+  border-bottom: 5px solid #ffacc4; */
+  border: 5px solid #ffacc4;
+  border-left: 2px;
+  border-right: 2px;
+  border-radius: 50%;
+  background: none;
+  height: 40px;
+  width: 60px;
+  color: #8fcdd4;
+}
+
+.content input {
+  margin: 0 20px;
+  outline: none;
+  box-shadow: 0px 0px 6px 12px #acd8db77;
+  border-radius: 10px;
+}
+
+.refContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.focusButton, .refContent button {
+  outline: none;
+  /* border-top: 5px solid #ffacc4;
+  border-bottom: 5px solid #ffacc4; */
+  border: 5px solid #ffacc4;
+  background: none;
+  color: #8fcdd4;
+  margin-top: 40px;
+  height: 60px;
+  width: 300px;
+  border-radius: 16px;
+  border-left: 1px solid #ffacc4;
+  border-right: 1px solid #ffacc4;
+  margin-bottom: 50px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

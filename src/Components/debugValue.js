@@ -1,49 +1,36 @@
-import React, { useState, useEffect, useLayoutEffect, useDebugValue } from "react";
+import React, { useState, useDebugValue } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const initialState = { count: 0 };
+function useAnalyzeState(state) {
+  useDebugValue(`State está ${state}`);
 
-function useFriendStatus(friendID) {
-    const [isOnline, setIsOnline] = useState(null);
-    useDebugValue(isOnline ? 'Online' : 'Offline');
-  
-    return isOnline;
-  }
+  return state;
+}
 
 export default function PageInputDebugValue() {
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState(0);
 
-  useFriendStatus(state)
-
-  useEffect(() => {
-    console.log('effect')
-    //return
-  }, [])
-
-  useLayoutEffect(() => {   
-    console.log('layout');
-    //return
-  }, [])
+  useAnalyzeState(state)
 
   function increment(){
-    setState({count: state.count + 1 })
+    setState(state + 1)
   }
   function decrement(){
-    setState({count: state.count - 1 })
+    setState(state - 1)
   }
   function handleChange(event){
-    setState({count: Number(event.target.value)})
+    setState(Number(event.target.value))
   }
 
   return (
-    <div>
+    <div className="content">
       <button onClick={decrement}>
         <FiMinus />
       </button>
       <input
         type="number"
         step="1"
-        value={state.count}
+        value={state}
         onChange={handleChange}
       />
       <button onClick={increment}>

@@ -20,7 +20,7 @@ export default function PageInputEffect() {
   }
 
   return (
-    <div>
+    <div className="content">
       <button onClick={decrement}>
         <FiMinus />
       </button>

@@ -15,7 +15,7 @@ export default function PageInputCallback() {
   },[state])
 
   return (
-    <div>
+    <div className="content">
       <button onClick={decrement}>
         <FiMinus />
       </button>

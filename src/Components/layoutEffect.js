@@ -25,7 +25,7 @@ export default function PageInputLayoutEffect() {
   }
 
   return (
-    <div>
+    <div className="content">
       <button onClick={decrement}>
         <FiMinus />
       </button>

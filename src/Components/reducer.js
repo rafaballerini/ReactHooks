@@ -16,7 +16,7 @@ export default function PageInputReducer() {
   const [state, dispatch] = useReducer(reducer, 0);
 
   return (
-    <div>
+    <div className="content">
       <button onClick={() => dispatch({ type: "decrement" })}>
         <FiMinus />
       </button>
