@@ -1,25 +1,24 @@
 import React, { useCallback, useState, useContext, createContext } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const initialState = { count: 0 };
 const Context = createContext()
 
 export function PageContextProvider({children}) {
-    const [state, setState] = useState(initialState);
+  const [state, setState] = useState(0);
 
-    const increment = useCallback(()=>{
-      setState({count: state.count + 1 })
-    },[state])
-    const decrement = useCallback(()=>{
-      setState({count: state.count - 1 })
-    },[state])
-    const handleChange = useCallback((event)=>{
-      setState({count: Number(event.target.value)})
-    },[state])
+  const increment = useCallback(()=>{
+    setState(state + 1)
+  },[state])
+  const decrement = useCallback(()=>{
+    setState(state - 1)
+  },[state])
+  const handleChange = useCallback((event)=>{
+    setState(Number(event.target.value))
+  },[state])
 
-    return (
-        <Context.Provider value={{state, increment, decrement, handleChange}}>{children}</Context.Provider>
-    )
+  return (
+    <Context.Provider value={{state, increment, decrement, handleChange}}>{children}</Context.Provider>
+  )
 }
 
 export default function PageInputContext() {
@@ -27,14 +26,14 @@ export default function PageInputContext() {
   const {state, increment, decrement, handleChange} = useContext(Context)
 
   return (
-    <div>
+    <div className="content">
       <button onClick={decrement}>
         <FiMinus />
       </button>
       <input
         type="number"
         step="1"
-        value={state.count}
+        value={state}
         onChange={handleChange}
       />
       <button onClick={increment}>
@@ -43,8 +42,3 @@ export default function PageInputContext() {
     </div>
   );
 }
-
-
-const list = [1, 2, 3, 4]
-list.map((a, b, c) => {} )
-

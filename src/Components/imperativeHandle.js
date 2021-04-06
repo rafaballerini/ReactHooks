@@ -14,7 +14,9 @@ function InputTextoImperative(props, ref) {
       }));
 
     return (
+      <div className="content">
         <input ref={inputRef} type="text" />
+      </div>
     );
   }
 

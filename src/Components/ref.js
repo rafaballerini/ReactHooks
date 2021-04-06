@@ -6,9 +6,9 @@ export default function InputTexto() {
       inputRef.current.focus();
     };
     return (
-      <>
+      <div className="content refContent">
         <input ref={inputRef} type="text" />
-        <button onClick={focaInput}>Dá foco no input</button>
-      </>
+        <button className="focusButton" onClick={focaInput}>Dá foco no input</button>
+      </div>
     );
   }
