@@ -6,7 +6,6 @@ export default function PageInputEffect() {
 
   useEffect(() => {
     console.log(state)
-    //return
   }, [state])
 
   function increment(){

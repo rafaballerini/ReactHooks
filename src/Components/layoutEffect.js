@@ -6,12 +6,10 @@ export default function PageInputLayoutEffect() {
 
   useEffect(() => {
     console.log('effect')
-    //return
   }, [])
 
   useLayoutEffect(() => {
     console.log('layout');
-    //return
   }, [])
 
   function increment(){

@@ -3,7 +3,6 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 
 function useAnalyzeState(state) {
   useDebugValue(`State está ${state}`);
-
   return state;
 }
 

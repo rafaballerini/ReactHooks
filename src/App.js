@@ -1,5 +1,5 @@
 import './App.css';
-import PageInputState from './Components/state'; //useState
+// import PageInputState from './Components/state'; //useState
 // import PageInputEffect from './Components/effect'; //useEffect
 // import PageInputReducer from './Components/reducer'; //useReducer
 // import PageInputCallback from './Components/callback'; //useCallback
@@ -21,16 +21,16 @@ function App() {
 
   return (
     <div className="App">
-      <PageInputState/> {/*useState*/}
-      {/*<PageInputEffect />*/} {/*useEffect*/}
+      {/*<PageInputState/>*/} {/*useState*/}
+      {/*(<PageInputEffect />)/} {/*useEffect*/}
       {/*<PageInputReducer/>*/} {/*useReducer*/}
-      {/*<PageInputCallback/>*/}{/*useCallback*/}
+      {/*<PageInputCallback/>*/} {/*useCallback*/}
       {/*<PageInputMemo />*/} {/*useMemo*/}
-      {/*<InputText/>*/} {/* useRef */}
+      {/*(<InputText/>)*/} {/* useRef */}
       {/*<InputTextoImperative ref={inputRef}/> 
       <button className="focusButton" onClick={focaInput}>Dá foco no input</button> {/*useImperativeHandle*/}
-      {/* <PageInputLayoutEffect/> */} {/*useLayoutEffect*/}
-      {/* <PageInputDebugValue/> {/*useDebugValue*/}
+      {/*<PageInputLayoutEffect/>*/}  {/*useLayoutEffect*/}
+      {/*<PageInputDebugValue/>*/} {/*useDebugValue*/}
       {/*<PageContextProvider><PageInputContext/></PageContextProvider>*/} {/*useContext*/}
     </div>
   );
