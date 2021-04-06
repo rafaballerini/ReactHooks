@@ -1,4 +1,5 @@
 # React Hooks
+<<<<<<< HEAD
 
 Entendendo como funcionam alguns dos React Hooks
 
