@@ -1,6 +1,6 @@
 # React Hooks <img src="./public/React.svg.png" width="150px" style="position: absolute; right: 10px">
 
-Entendendo como funcionam alguns dos React Hooks
+Entendendo como funcionam alguns Hooks do React
 <hr>
 
 ### Como rodar o projeto:
