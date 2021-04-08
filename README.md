@@ -17,6 +17,7 @@ Entendendo como funcionam alguns Hooks do React
 2. Descomente a importação referente ao hook que deseja testar e também a linha dentro da função (há outro comentário no final da linha indicando a qual hook ela pertence).
 
 <hr>
+
 ## Explicação de cada Hook:
 
 ### useState
@@ -155,7 +156,7 @@ A função não ser recarregada toda hora facilita muito o processamento.
 
 ### useMemo
 Assim como o `useCallback`:
-- **recebe 2 parâmetros: uma função e uma lista de dependências. 
+- **recebe 2 parâmetros:** uma função e uma lista de dependências. 
 
 ```js
 const memorizedValue = useMemo(() => {
