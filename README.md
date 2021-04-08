@@ -155,7 +155,7 @@ A função não ser recarregada toda hora facilita muito o processamento.
 
 ### useMemo
 Assim como o `useCallback`:
-- **recebe 2 parâmetros: uma função e uma lista de dependências. 
+- **recebe 2 parâmetros:** uma função e uma lista de dependências. 
 
 ```js
 const memorizedValue = useMemo(() => {
