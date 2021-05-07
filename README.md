@@ -17,6 +17,7 @@ Entendendo como funcionam alguns Hooks do React
 2. Descomente a importação referente ao hook que deseja testar e também a linha dentro da função (há outro comentário no final da linha indicando a qual hook ela pertence).
 
 <hr>
+
 ## Explicação de cada Hook:
 
 ### useState
