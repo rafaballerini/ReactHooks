@@ -251,3 +251,5 @@ function useAnalyzeState(state) {
 ```
 
 Como o próprio nome diz, é utilizado para fazer debug.
+
+Opa rafa, só tô tentando fazer um pull request que você ensina no seu curso de git e github :)
