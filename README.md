@@ -1,22 +1,32 @@
-# React Hooks <img src="./public/React.svg.png" width="150px" style="position: absolute; right: 10px">
+# <img src="https://user-images.githubusercontent.com/70824102/195250026-ece9b0bb-f6a6-47ca-baa3-e2ab4502ce73.png" width="30"> React Hooks 
 
 Entendendo como funcionam alguns Hooks do React
-<hr>
 
-### Como rodar o projeto:
+## Como rodar o projeto:
 
 **Você pode clonar o projeto e rodá-lo localmente seguindo os passos abaixo**
 
-1. `git clone https://github.com/rafaballerini/ReactHooks.git` para clonar o projeto
-2. `yarn` para instalar as dependências do projeto
-3. `yarn start`
-4. Acessar [http://localhost:3000](http://localhost:3000) no navegador
+**1. Clone o projeto usando git clone:**
+```bash
+> git clone https://github.com/rafaballerini/ReactHooks.git
+```
 
-### Como testar cada um dos hooks:
-1. Abra o arquivo `App.js`. É possível perceber que existem várias linhas comentadas, tanto na parte de importações, quando dentro da função.
-2. Descomente a importação referente ao hook que deseja testar e também a linha dentro da função (há outro comentário no final da linha indicando a qual hook ela pertence).
+**2. Instale as dependências do projeto:**
+```bash
+> yarn install
+```
 
-<hr>
+**3. Execute o projeto**
+```bash
+> yarn start
+```
+
+Por fim, acesse o projeto que está sendo executado em [http://localhost:3000](http://localhost:3000) no navegador.
+
+## Como testar cada um dos hooks:
+
+- Abra o arquivo `App.js`. É possível perceber que existem várias linhas comentadas, tanto na parte de importações, quando dentro da função.
+- Descomente a importação referente ao hook que deseja testar e também a linha dentro da função (há outro comentário no final da linha indicando a qual hook ela pertence).
 
 ## Explicação de cada Hook:
 
@@ -32,9 +42,9 @@ const [state, setState] = useState(0);
 O `setState` será usado para atualizar os valores do estado, por exemplo:
 
 ```js
-  function increment(){
-    setState(state + 1)
-  }
+function increment(){
+  setState(state + 1)
+}
 ```
 
 ### useEffect
@@ -42,9 +52,9 @@ O `setState` será usado para atualizar os valores do estado, por exemplo:
 - **o retorno da função pode ser uma função.** Se for, ela será executada quando o componente for desmontado
 
 ```js
-  useEffect(() => {
-    console.log(state)
-  }, [state])
+useEffect(() => {
+  console.log(state)
+}, [state])
 ```
 
 Quando a lista de dependências estiver vazia, a função será executada no momento que o componente for renderizado.
