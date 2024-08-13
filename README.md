@@ -251,3 +251,6 @@ function useAnalyzeState(state) {
 ```
 
 Como o próprio nome diz, é utilizado para fazer debug.
+
+aula muito boa, sensacionaaalllllllllllll
+
